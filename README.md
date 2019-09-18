@@ -16,6 +16,12 @@ curl http://localhost:3002
 curl http://localhost:3002/users
 ```
 
+### Get Users
+```
+curl http://localhost:3002/users
+```
+
+
 ### Post a New User
 ```
 curl -d "name={NAME}&email={EMAIL}" http://localhost:3002/users
