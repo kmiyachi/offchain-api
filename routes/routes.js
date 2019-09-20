@@ -4,7 +4,7 @@ const accessArtifact = require('../build/contracts/Access.json');
 
 
 const request = require('request');
-var contractAddr =  '0x6aE6B5119B854024A70a0382C52F8CD793f78af7';
+var contractAddr =  '0x8bF516Ac90a6590f44158Dfcf92a92Ad95280735';
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
@@ -89,9 +89,23 @@ const router = app => {
     });
 
 
-
+    //0x42bb9572ab12e65e117a8a5abf492d48d9e7cf02589dc63cd2feb7477f64c419
     // Display all users
-    app.get('/users', (request, response) => {
+    app.get('/allUsers/:lunaID', async function (request, response) {
+        const lunaID = request.params.lunaID;
+        try{
+            res = await access.methods.researcherAccess(lunaID).send({from: accountArr[0]})
+            //response.send({message: res})
+          }
+        catch(error){
+            const revertFound = error.message.search('revert') >= 0;
+            response.send({
+                error: revertFound,
+                errMessage: error.message
+            });
+            return;
+        }
+
         pool.query('SELECT * FROM users', (error, result) => {
             if (error) throw error;
             response.send(result);
@@ -99,18 +113,45 @@ const router = app => {
     });
 
     // Display a single user by ID
-    app.get('/users/:id', (request, response) => {
+    app.get('/users/:id/:lunaID', async function (request, response) {
         const id = request.params.id;
+        const lunaID = request.params.lunaID;
+        try{
+            res = await access.methods.researcherAccess(lunaID).send({from: accountArr[0]})
+            //response.send({message: res})
+          }
+        catch(error){
+            const revertFound = error.message.search('revert') >= 0;
+            response.send({
+                error: revertFound,
+                errMessage: error.message
+            });
+            return;
+        }
 
         pool.query('SELECT * FROM users WHERE id = ?', id, (error, result) => {
             if (error) throw error;
-
             response.send(result);
         });
     });
 
     // Add a new user
-    app.post('/users', (request, response) => {
+    app.post('/users/:lunaID', async function (request, response) {
+
+        const lunaID = request.params.lunaID;
+        try{
+            res = await access.methods.memberAccess(lunaID).send({from: accountArr[0]})
+            //response.send({message: res})
+          }
+        catch(error){
+            const revertFound = error.message.search('revert') >= 0;
+            response.send({
+                error: revertFound,
+                errMessage: error.message
+            });
+            return;
+        }
+
         pool.query('INSERT INTO users SET ?', request.body, (error, result) => {
             if (error) throw error;
 
@@ -119,8 +160,21 @@ const router = app => {
     });
 
     // Update an existing user
-    app.put('/users/:id', (request, response) => {
+    app.put('/users/:id/:lunaID', async function (request, response) {
         const id = request.params.id;
+        const lunaID = request.params.lunaID;
+        try{
+            res = await access.methods.memberAccess(lunaID).send({from: accountArr[0]})
+            //response.send({message: res})
+          }
+        catch(error){
+            const revertFound = error.message.search('revert') >= 0;
+            response.send({
+                error: revertFound,
+                errMessage: error.message
+            });
+            return;
+        }
 
         pool.query('UPDATE users SET ? WHERE id = ?', [request.body, id], (error, result) => {
             if (error) throw error;
@@ -130,8 +184,21 @@ const router = app => {
     });
 
     // Delete a user
-    app.delete('/users/:id', (request, response) => {
+    app.delete('/users/:id/lunaID', async function (request, response) {
         const id = request.params.id;
+        const lunaID = request.params.lunaID;
+        try{
+            res = await access.methods.memberAccess(lunaID).send({from: accountArr[0]})
+            //response.send({message: res})
+          }
+        catch(error){
+            const revertFound = error.message.search('revert') >= 0;
+            response.send({
+                error: revertFound,
+                errMessage: error.message
+            });
+            return;
+        }
 
         pool.query('DELETE FROM users WHERE id = ?', id, (error, result) => {
             if (error) throw error;
