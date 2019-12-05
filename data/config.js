@@ -2,10 +2,10 @@ const mysql = require('mysql');
 
 // Set database connection credentials
 const config = {
-    host: 'localhost',
-    user: 'root',
-    password: 'ethblender',
-    database: 'offchain',
+    host: 'remotemysql.com',
+    user: 'V3pkwGwMP5',
+    password: 'oBfdOrHYr1',
+    database: 'V3pkwGwMP5',
 };
 
 // Create a MySQL pool

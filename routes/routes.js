@@ -1,10 +1,11 @@
 // Load the MySQL pool connection
 const pool = require('../data/config');
 const accessArtifact = require('../build/contracts/Access.json');
+//const sysAdminArtifact = require('../build/')
 
 
 const request = require('request');
-var contractAddr =  '0x8bF516Ac90a6590f44158Dfcf92a92Ad95280735';
+var contractAddr =  '0x54380b6ea8e841B4933111086934675df03e7d13';
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
@@ -32,10 +33,14 @@ var accountArr = [];
 
 Access.setProvider(web3.currentProvider)
 
-var access = Access.at(contractAddr);
-var access = Access.deployed();
-var access = new web3.eth.Contract(accessArtifact.abi, contractAddr, {from: '0x1F8cBF54d39e94808Ff0eAA1902b7B29e6bdfD80'})
-
+//var access = Access.at(contractAddr);
+var access = Access.deployed().then((res) => {
+    console.log("RESULT: ",res.address);
+    return res;
+});
+//console.log("SHIT: ", access.address)
+var access = new web3.eth.Contract(accessArtifact.abi, contractAddr, {from: '0x84Fc70E796E0339001a027202e1dDe7d01BA347b'})
+//console.log(access.address);
 
 //console.log("Access: ", access);
 //console.log("Access Methods: ", access.methods);
@@ -93,9 +98,11 @@ const router = app => {
     // Display all users
     app.get('/allUsers/:lunaID', async function (request, response) {
         const lunaID = request.params.lunaID;
+        var queryRes = ""
         try{
             res = await access.methods.researcherAccess(lunaID).send({from: accountArr[0]})
             //response.send({message: res})
+            queryRes = await access.methods.queryDB().send({from: accountArr[0]});
           }
         catch(error){
             const revertFound = error.message.search('revert') >= 0;
@@ -105,7 +112,7 @@ const router = app => {
             });
             return;
         }
-
+        console.log(queryRes)
         pool.query('SELECT * FROM users', (error, result) => {
             if (error) throw error;
             response.send(result);
@@ -131,7 +138,7 @@ const router = app => {
 
         pool.query('SELECT * FROM users WHERE id = ?', id, (error, result) => {
             if (error) throw error;
-            response.send(result);
+            response.send(result[0]);
         });
     });
 

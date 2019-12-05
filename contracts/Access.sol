@@ -1,15 +1,23 @@
 pragma solidity >=0.4.21 <0.6.0;
 pragma experimental ABIEncoderV2;
 
-contract Access {
+import "./provableAPI_0.5.sol";
+
+contract Access is usingProvable {
     address public owner;
     bytes32 noID = 0;
     event IDK(bytes32 id);
     event HOPE(Member mem);
+    event LogNewProvableQuery(string description);
+    event Balance(uint amount, uint moneyNeeded);
+    event QueryRes(string result);
+
+    uint public last_completed_migration;
+    uint public balance;
 
     struct Modification {
-    string timeStamp;
-    string modType;
+        string timeStamp;
+        string modType;
     }
 
     struct Member {
@@ -27,12 +35,13 @@ contract Access {
         uint256[] mTime;
     }
 
+    string res;
 
     mapping(uint256=>string) modMap;
     mapping(bytes32=>Member) memMap;
     mapping(bytes32=>Researcher) rMap;
-    
-    
+
+
     mapping(string=>bool) memName;
     mapping(string=>bool) rName;
     Member[] memList;
@@ -48,6 +57,15 @@ contract Access {
         addResearcher("Danny");
     }
 
+    function __callback(bytes32 myid, string memory result) public {
+       if (msg.sender != provable_cbAddress()) revert("Not Enough Funds");
+       result = result;
+       emit QueryRes(res);
+   }
+   
+    function() payable external {}
+
+
     modifier isOwner() {
         if (msg.sender == owner) _;
     }
@@ -55,15 +73,6 @@ contract Access {
     function getAccess() public view {
         require(msg.sender == owner, "Access not Granted!");
     }
-
-    // function memberAccess(bytes32 _id) public view {
-    //     require(memMap[_id].id != noID, "Member does not exist!");
-    // }
-
-    //     function researcherAccess(bytes32 _id) public view {
-    //     require(rMap[_id].id != noID, "Researcher does not exist!");
-    // }
-
 
     function memberAccess(string memory _name) public view {
         require(memName[_name], "Member does not exist!");
@@ -90,6 +99,17 @@ contract Access {
         rName[_name] = true;
         rList.push(newResearcher);
     }
+
+
+    function queryDB() public payable {
+       //emit Balance(address(this).balance, provable_getPrice("URL"));
+       if (provable_getPrice("URL") > address(this).balance) {
+           emit LogNewProvableQuery("Provable query was NOT sent, please add some ETH to cover for the query fee");
+       } else {
+           emit LogNewProvableQuery("Provable query was sent, standing by for the answer..");
+           provable_query("URL", "json(https://white-owl-58.localtunnel.me/users/1/Danny).name");
+       }
+   }
 
 
     function help(uint256 _index) public {
