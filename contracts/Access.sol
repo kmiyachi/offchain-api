@@ -59,7 +59,7 @@ contract Access is usingProvable {
 
     function __callback(bytes32 myid, string memory result) public {
        if (msg.sender != provable_cbAddress()) revert("Not Enough Funds");
-       result = result;
+       res = result;
        emit QueryRes(res);
    }
    
@@ -107,7 +107,7 @@ contract Access is usingProvable {
            emit LogNewProvableQuery("Provable query was NOT sent, please add some ETH to cover for the query fee");
        } else {
            emit LogNewProvableQuery("Provable query was sent, standing by for the answer..");
-           provable_query("URL", "json(https://white-owl-58.localtunnel.me/users/1/Danny).name");
+           provable_query("URL", "json(https://purple-elephant-56.localtunnel.me/1/Danny).name");
        }
    }
 
@@ -115,6 +115,11 @@ contract Access is usingProvable {
     function help(uint256 _index) public {
         emit IDK(memList[_index].id);
         emit HOPE(memList[_index]);
+    }
+
+
+    function getRes() public pure returns (string memory res) {
+        return res;
     }
 
     

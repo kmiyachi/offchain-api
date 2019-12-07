@@ -38,6 +38,8 @@ var access = Access.deployed().then((res) => {
     console.log("RESULT: ",res.address);
     return res;
 });
+
+console.log("access address: ", access.address)
 //console.log("SHIT: ", access.address)
 var access = new web3.eth.Contract(accessArtifact.abi, contractAddr, {from: '0x84Fc70E796E0339001a027202e1dDe7d01BA347b'})
 //console.log(access.address);
@@ -164,6 +166,27 @@ const router = app => {
 
             response.status(201).send(`User added with ID: ${result.insertId}`);
         });
+    });
+
+
+    app.get('/oracleTest', async function (request, response) {
+
+        //const lunaID = request.params.lunaID;
+        try{
+            res = await access.methods.queryDB().send({from: accountArr[0]})
+            //response.send({message: res})
+          }
+        catch(error){
+            const revertFound = error.message.search('revert') >= 0;
+            response.send({
+                error: revertFound,
+                errMessage: error.message
+            });
+            return;
+        }
+
+        hope = await access.methods.getRes().call({from: accountArr[0]})
+        response.send({message: hope})
     });
 
     // Update an existing user

@@ -84,14 +84,14 @@
     "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/Organization.sol",
     "exportedSymbols": {
       "Organization": [
-        625
+        633
       ]
     },
-    "id": 626,
+    "id": 634,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 538,
+        "id": 546,
         "literals": [
           "solidity",
           ">=",
@@ -107,10 +107,10 @@
       {
         "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol",
         "file": "./SafeMath.sol",
-        "id": 539,
+        "id": 547,
         "nodeType": "ImportDirective",
-        "scope": 626,
-        "sourceUnit": 858,
+        "scope": 634,
+        "sourceUnit": 866,
         "src": "34:24:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -121,19 +121,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 625,
+        "id": 633,
         "linearizedBaseContracts": [
-          625
+          633
         ],
         "name": "Organization",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 541,
+            "id": 549,
             "name": "orgID",
             "nodeType": "VariableDeclaration",
-            "scope": 625,
+            "scope": 633,
             "src": "88:13:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -142,7 +142,7 @@
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 540,
+              "id": 548,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
               "src": "88:7:3",
@@ -156,10 +156,10 @@
           },
           {
             "constant": false,
-            "id": 543,
+            "id": 551,
             "name": "orgAdmin",
             "nodeType": "VariableDeclaration",
-            "scope": 625,
+            "scope": 633,
             "src": "107:16:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -168,7 +168,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 542,
+              "id": 550,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "107:7:3",
@@ -183,10 +183,10 @@
           },
           {
             "constant": false,
-            "id": 546,
+            "id": 554,
             "name": "memberList",
             "nodeType": "VariableDeclaration",
-            "scope": 625,
+            "scope": 633,
             "src": "129:20:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -196,7 +196,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 544,
+                "id": 552,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "129:7:3",
@@ -206,7 +206,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 545,
+              "id": 553,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "129:9:3",
@@ -220,10 +220,10 @@
           },
           {
             "constant": false,
-            "id": 549,
+            "id": 557,
             "name": "researcherList",
             "nodeType": "VariableDeclaration",
-            "scope": 625,
+            "scope": 633,
             "src": "155:24:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -233,7 +233,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 547,
+                "id": 555,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "155:7:3",
@@ -243,7 +243,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 548,
+              "id": 556,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "155:9:3",
@@ -257,25 +257,25 @@
           },
           {
             "body": {
-              "id": 565,
+              "id": 573,
               "nodeType": "Block",
               "src": "219:68:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 556,
+                    "id": 564,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 554,
+                      "id": 562,
                       "name": "orgID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 541,
+                      "referencedDeclaration": 549,
                       "src": "229:5:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -286,11 +286,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 555,
+                      "id": 563,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 551,
+                      "referencedDeclaration": 559,
                       "src": "237:3:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -303,25 +303,25 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 557,
+                  "id": 565,
                   "nodeType": "ExpressionStatement",
                   "src": "229:11:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 563,
+                    "id": 571,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 558,
+                      "id": 566,
                       "name": "orgAdmin",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 543,
+                      "referencedDeclaration": 551,
                       "src": "250:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -337,18 +337,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 560,
+                            "id": 568,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 13724,
+                            "referencedDeclaration": 13732,
                             "src": "269:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 561,
+                          "id": 569,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -370,7 +370,7 @@
                             "typeString": "address payable"
                           }
                         ],
-                        "id": 559,
+                        "id": 567,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -383,7 +383,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 562,
+                      "id": 570,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -403,29 +403,29 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 564,
+                  "id": 572,
                   "nodeType": "ExpressionStatement",
                   "src": "250:30:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 566,
+            "id": 574,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 552,
+              "id": 560,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 551,
+                  "id": 559,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 566,
+                  "scope": 574,
                   "src": "199:11:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -434,7 +434,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 550,
+                    "id": 558,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "199:7:3",
@@ -450,12 +450,12 @@
               "src": "198:13:3"
             },
             "returnParameters": {
-              "id": 553,
+              "id": 561,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "219:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "187:100:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -463,7 +463,7 @@
           },
           {
             "body": {
-              "id": 577,
+              "id": 585,
               "nodeType": "Block",
               "src": "316:107:3",
               "statements": [
@@ -477,7 +477,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 572,
+                        "id": 580,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -486,18 +486,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 569,
+                            "id": 577,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 13724,
+                            "referencedDeclaration": 13732,
                             "src": "334:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 570,
+                          "id": 578,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -515,11 +515,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 571,
+                          "id": 579,
                           "name": "orgAdmin",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 543,
+                          "referencedDeclaration": 551,
                           "src": "348:8:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -535,7 +535,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "53656e646572206973206e6f7420746865204f7267616e697a6174696f6e2041646d696e6973747261746f72",
-                        "id": 573,
+                        "id": 581,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -562,21 +562,21 @@
                           "typeString": "literal_string \"Sender is not the Organization Administrator\""
                         }
                       ],
-                      "id": 568,
+                      "id": 576,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        13727,
-                        13728
+                        13735,
+                        13736
                       ],
-                      "referencedDeclaration": 13728,
+                      "referencedDeclaration": 13736,
                       "src": "326:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 574,
+                    "id": 582,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -590,23 +590,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 575,
+                  "id": 583,
                   "nodeType": "ExpressionStatement",
                   "src": "326:79:3"
                 },
                 {
-                  "id": 576,
+                  "id": 584,
                   "nodeType": "PlaceholderStatement",
                   "src": "415:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 578,
+            "id": 586,
             "name": "isOrgAdmin",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 567,
+              "id": 575,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "313:2:3"
@@ -616,7 +616,7 @@
           },
           {
             "body": {
-              "id": 591,
+              "id": 599,
               "nodeType": "Block",
               "src": "492:45:3",
               "statements": [
@@ -626,11 +626,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 588,
+                        "id": 596,
                         "name": "_memberAddr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 580,
+                        "referencedDeclaration": 588,
                         "src": "518:11:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -647,18 +647,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 585,
+                        "id": 593,
                         "name": "memberList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 546,
+                        "referencedDeclaration": 554,
                         "src": "502:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 587,
+                      "id": 595,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -672,7 +672,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 589,
+                    "id": 597,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -686,27 +686,27 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 590,
+                  "id": 598,
                   "nodeType": "ExpressionStatement",
                   "src": "502:28:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 592,
+            "id": 600,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 583,
+                "id": 591,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 582,
+                  "id": 590,
                   "name": "isOrgAdmin",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 578,
+                  "referencedDeclaration": 586,
                   "src": "481:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -720,15 +720,15 @@
             "name": "addMemberToOrg",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 581,
+              "id": 589,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 580,
+                  "id": 588,
                   "name": "_memberAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 592,
+                  "scope": 600,
                   "src": "453:19:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -737,7 +737,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 579,
+                    "id": 587,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "453:7:3",
@@ -754,12 +754,12 @@
               "src": "452:21:3"
             },
             "returnParameters": {
-              "id": 584,
+              "id": 592,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "492:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "429:108:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -767,26 +767,26 @@
           },
           {
             "body": {
-              "id": 601,
+              "id": 609,
               "nodeType": "Block",
               "src": "630:21:3",
               "statements": []
             },
             "documentation": null,
-            "id": 602,
+            "id": 610,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 599,
+                "id": 607,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 598,
+                  "id": 606,
                   "name": "isOrgAdmin",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 578,
+                  "referencedDeclaration": 586,
                   "src": "619:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -800,15 +800,15 @@
             "name": "deleteUserFromOrganization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 597,
+              "id": 605,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 594,
+                  "id": 602,
                   "name": "_lunaId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 602,
+                  "scope": 610,
                   "src": "579:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -817,7 +817,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 593,
+                    "id": 601,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "579:7:3",
@@ -831,10 +831,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 596,
+                  "id": 604,
                   "name": "_orgId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 602,
+                  "scope": 610,
                   "src": "596:14:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -843,7 +843,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 595,
+                    "id": 603,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "596:7:3",
@@ -859,12 +859,12 @@
               "src": "578:33:3"
             },
             "returnParameters": {
-              "id": 600,
+              "id": 608,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "630:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "543:108:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -872,7 +872,7 @@
           },
           {
             "body": {
-              "id": 615,
+              "id": 623,
               "nodeType": "Block",
               "src": "725:45:3",
               "statements": [
@@ -882,11 +882,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 612,
+                        "id": 620,
                         "name": "_memberAddr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 604,
+                        "referencedDeclaration": 612,
                         "src": "751:11:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -903,18 +903,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 609,
+                        "id": 617,
                         "name": "memberList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 546,
+                        "referencedDeclaration": 554,
                         "src": "735:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 611,
+                      "id": 619,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -928,7 +928,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 613,
+                    "id": 621,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -942,27 +942,27 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 614,
+                  "id": 622,
                   "nodeType": "ExpressionStatement",
                   "src": "735:28:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 616,
+            "id": 624,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 607,
+                "id": 615,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 606,
+                  "id": 614,
                   "name": "isOrgAdmin",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 578,
+                  "referencedDeclaration": 586,
                   "src": "714:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -976,15 +976,15 @@
             "name": "addResearcherToOrg",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 605,
+              "id": 613,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 604,
+                  "id": 612,
                   "name": "_memberAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 616,
+                  "scope": 624,
                   "src": "686:19:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -993,7 +993,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 603,
+                    "id": 611,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "686:7:3",
@@ -1010,12 +1010,12 @@
               "src": "685:21:3"
             },
             "returnParameters": {
-              "id": 608,
+              "id": 616,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "725:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "658:112:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1023,26 +1023,26 @@
           },
           {
             "body": {
-              "id": 623,
+              "id": 631,
               "nodeType": "Block",
               "src": "853:21:3",
               "statements": []
             },
             "documentation": null,
-            "id": 624,
+            "id": 632,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 621,
+                "id": 629,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 620,
+                  "id": 628,
                   "name": "isOrgAdmin",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 578,
+                  "referencedDeclaration": 586,
                   "src": "842:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1056,15 +1056,15 @@
             "name": "deleteResearcherFromOrg",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 619,
+              "id": 627,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 618,
+                  "id": 626,
                   "name": "_memberAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 624,
+                  "scope": 632,
                   "src": "814:19:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1073,7 +1073,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 617,
+                    "id": 625,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "814:7:3",
@@ -1090,19 +1090,19 @@
               "src": "813:21:3"
             },
             "returnParameters": {
-              "id": 622,
+              "id": 630,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "853:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "781:93:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 626,
+        "scope": 634,
         "src": "60:816:3"
       }
     ],
@@ -1112,14 +1112,14 @@
     "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/Organization.sol",
     "exportedSymbols": {
       "Organization": [
-        625
+        633
       ]
     },
-    "id": 626,
+    "id": 634,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 538,
+        "id": 546,
         "literals": [
           "solidity",
           ">=",
@@ -1135,10 +1135,10 @@
       {
         "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol",
         "file": "./SafeMath.sol",
-        "id": 539,
+        "id": 547,
         "nodeType": "ImportDirective",
-        "scope": 626,
-        "sourceUnit": 858,
+        "scope": 634,
+        "sourceUnit": 866,
         "src": "34:24:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1149,19 +1149,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 625,
+        "id": 633,
         "linearizedBaseContracts": [
-          625
+          633
         ],
         "name": "Organization",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 541,
+            "id": 549,
             "name": "orgID",
             "nodeType": "VariableDeclaration",
-            "scope": 625,
+            "scope": 633,
             "src": "88:13:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1170,7 +1170,7 @@
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 540,
+              "id": 548,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
               "src": "88:7:3",
@@ -1184,10 +1184,10 @@
           },
           {
             "constant": false,
-            "id": 543,
+            "id": 551,
             "name": "orgAdmin",
             "nodeType": "VariableDeclaration",
-            "scope": 625,
+            "scope": 633,
             "src": "107:16:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1196,7 +1196,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 542,
+              "id": 550,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "107:7:3",
@@ -1211,10 +1211,10 @@
           },
           {
             "constant": false,
-            "id": 546,
+            "id": 554,
             "name": "memberList",
             "nodeType": "VariableDeclaration",
-            "scope": 625,
+            "scope": 633,
             "src": "129:20:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1224,7 +1224,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 544,
+                "id": 552,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "129:7:3",
@@ -1234,7 +1234,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 545,
+              "id": 553,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "129:9:3",
@@ -1248,10 +1248,10 @@
           },
           {
             "constant": false,
-            "id": 549,
+            "id": 557,
             "name": "researcherList",
             "nodeType": "VariableDeclaration",
-            "scope": 625,
+            "scope": 633,
             "src": "155:24:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1261,7 +1261,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 547,
+                "id": 555,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "155:7:3",
@@ -1271,7 +1271,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 548,
+              "id": 556,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "155:9:3",
@@ -1285,25 +1285,25 @@
           },
           {
             "body": {
-              "id": 565,
+              "id": 573,
               "nodeType": "Block",
               "src": "219:68:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 556,
+                    "id": 564,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 554,
+                      "id": 562,
                       "name": "orgID",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 541,
+                      "referencedDeclaration": 549,
                       "src": "229:5:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -1314,11 +1314,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 555,
+                      "id": 563,
                       "name": "_id",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 551,
+                      "referencedDeclaration": 559,
                       "src": "237:3:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -1331,25 +1331,25 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "id": 557,
+                  "id": 565,
                   "nodeType": "ExpressionStatement",
                   "src": "229:11:3"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 563,
+                    "id": 571,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 558,
+                      "id": 566,
                       "name": "orgAdmin",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 543,
+                      "referencedDeclaration": 551,
                       "src": "250:8:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1365,18 +1365,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 560,
+                            "id": 568,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 13724,
+                            "referencedDeclaration": 13732,
                             "src": "269:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 561,
+                          "id": 569,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1398,7 +1398,7 @@
                             "typeString": "address payable"
                           }
                         ],
-                        "id": 559,
+                        "id": 567,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1411,7 +1411,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 562,
+                      "id": 570,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1431,29 +1431,29 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 564,
+                  "id": 572,
                   "nodeType": "ExpressionStatement",
                   "src": "250:30:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 566,
+            "id": 574,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 552,
+              "id": 560,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 551,
+                  "id": 559,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 566,
+                  "scope": 574,
                   "src": "199:11:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1462,7 +1462,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 550,
+                    "id": 558,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "199:7:3",
@@ -1478,12 +1478,12 @@
               "src": "198:13:3"
             },
             "returnParameters": {
-              "id": 553,
+              "id": 561,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "219:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "187:100:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1491,7 +1491,7 @@
           },
           {
             "body": {
-              "id": 577,
+              "id": 585,
               "nodeType": "Block",
               "src": "316:107:3",
               "statements": [
@@ -1505,7 +1505,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 572,
+                        "id": 580,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1514,18 +1514,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 569,
+                            "id": 577,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 13724,
+                            "referencedDeclaration": 13732,
                             "src": "334:3:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 570,
+                          "id": 578,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1543,11 +1543,11 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 571,
+                          "id": 579,
                           "name": "orgAdmin",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 543,
+                          "referencedDeclaration": 551,
                           "src": "348:8:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1563,7 +1563,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "53656e646572206973206e6f7420746865204f7267616e697a6174696f6e2041646d696e6973747261746f72",
-                        "id": 573,
+                        "id": 581,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1590,21 +1590,21 @@
                           "typeString": "literal_string \"Sender is not the Organization Administrator\""
                         }
                       ],
-                      "id": 568,
+                      "id": 576,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        13727,
-                        13728
+                        13735,
+                        13736
                       ],
-                      "referencedDeclaration": 13728,
+                      "referencedDeclaration": 13736,
                       "src": "326:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 574,
+                    "id": 582,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1618,23 +1618,23 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 575,
+                  "id": 583,
                   "nodeType": "ExpressionStatement",
                   "src": "326:79:3"
                 },
                 {
-                  "id": 576,
+                  "id": 584,
                   "nodeType": "PlaceholderStatement",
                   "src": "415:1:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 578,
+            "id": 586,
             "name": "isOrgAdmin",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 567,
+              "id": 575,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "313:2:3"
@@ -1644,7 +1644,7 @@
           },
           {
             "body": {
-              "id": 591,
+              "id": 599,
               "nodeType": "Block",
               "src": "492:45:3",
               "statements": [
@@ -1654,11 +1654,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 588,
+                        "id": 596,
                         "name": "_memberAddr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 580,
+                        "referencedDeclaration": 588,
                         "src": "518:11:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1675,18 +1675,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 585,
+                        "id": 593,
                         "name": "memberList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 546,
+                        "referencedDeclaration": 554,
                         "src": "502:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 587,
+                      "id": 595,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1700,7 +1700,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 589,
+                    "id": 597,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1714,27 +1714,27 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 590,
+                  "id": 598,
                   "nodeType": "ExpressionStatement",
                   "src": "502:28:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 592,
+            "id": 600,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 583,
+                "id": 591,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 582,
+                  "id": 590,
                   "name": "isOrgAdmin",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 578,
+                  "referencedDeclaration": 586,
                   "src": "481:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1748,15 +1748,15 @@
             "name": "addMemberToOrg",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 581,
+              "id": 589,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 580,
+                  "id": 588,
                   "name": "_memberAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 592,
+                  "scope": 600,
                   "src": "453:19:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1765,7 +1765,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 579,
+                    "id": 587,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "453:7:3",
@@ -1782,12 +1782,12 @@
               "src": "452:21:3"
             },
             "returnParameters": {
-              "id": 584,
+              "id": 592,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "492:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "429:108:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1795,26 +1795,26 @@
           },
           {
             "body": {
-              "id": 601,
+              "id": 609,
               "nodeType": "Block",
               "src": "630:21:3",
               "statements": []
             },
             "documentation": null,
-            "id": 602,
+            "id": 610,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 599,
+                "id": 607,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 598,
+                  "id": 606,
                   "name": "isOrgAdmin",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 578,
+                  "referencedDeclaration": 586,
                   "src": "619:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1828,15 +1828,15 @@
             "name": "deleteUserFromOrganization",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 597,
+              "id": 605,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 594,
+                  "id": 602,
                   "name": "_lunaId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 602,
+                  "scope": 610,
                   "src": "579:15:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1845,7 +1845,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 593,
+                    "id": 601,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "579:7:3",
@@ -1859,10 +1859,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 596,
+                  "id": 604,
                   "name": "_orgId",
                   "nodeType": "VariableDeclaration",
-                  "scope": 602,
+                  "scope": 610,
                   "src": "596:14:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1871,7 +1871,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 595,
+                    "id": 603,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "596:7:3",
@@ -1887,12 +1887,12 @@
               "src": "578:33:3"
             },
             "returnParameters": {
-              "id": 600,
+              "id": 608,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "630:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "543:108:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1900,7 +1900,7 @@
           },
           {
             "body": {
-              "id": 615,
+              "id": 623,
               "nodeType": "Block",
               "src": "725:45:3",
               "statements": [
@@ -1910,11 +1910,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 612,
+                        "id": 620,
                         "name": "_memberAddr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 604,
+                        "referencedDeclaration": 612,
                         "src": "751:11:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1931,18 +1931,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 609,
+                        "id": 617,
                         "name": "memberList",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 546,
+                        "referencedDeclaration": 554,
                         "src": "735:10:3",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 611,
+                      "id": 619,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1956,7 +1956,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 613,
+                    "id": 621,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1970,27 +1970,27 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 614,
+                  "id": 622,
                   "nodeType": "ExpressionStatement",
                   "src": "735:28:3"
                 }
               ]
             },
             "documentation": null,
-            "id": 616,
+            "id": 624,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 607,
+                "id": 615,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 606,
+                  "id": 614,
                   "name": "isOrgAdmin",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 578,
+                  "referencedDeclaration": 586,
                   "src": "714:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2004,15 +2004,15 @@
             "name": "addResearcherToOrg",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 605,
+              "id": 613,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 604,
+                  "id": 612,
                   "name": "_memberAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 616,
+                  "scope": 624,
                   "src": "686:19:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2021,7 +2021,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 603,
+                    "id": 611,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "686:7:3",
@@ -2038,12 +2038,12 @@
               "src": "685:21:3"
             },
             "returnParameters": {
-              "id": 608,
+              "id": 616,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "725:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "658:112:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2051,26 +2051,26 @@
           },
           {
             "body": {
-              "id": 623,
+              "id": 631,
               "nodeType": "Block",
               "src": "853:21:3",
               "statements": []
             },
             "documentation": null,
-            "id": 624,
+            "id": 632,
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
                 "arguments": null,
-                "id": 621,
+                "id": 629,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 620,
+                  "id": 628,
                   "name": "isOrgAdmin",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 578,
+                  "referencedDeclaration": 586,
                   "src": "842:10:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -2084,15 +2084,15 @@
             "name": "deleteResearcherFromOrg",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 619,
+              "id": 627,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 618,
+                  "id": 626,
                   "name": "_memberAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 624,
+                  "scope": 632,
                   "src": "814:19:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2101,7 +2101,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 617,
+                    "id": 625,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "814:7:3",
@@ -2118,19 +2118,19 @@
               "src": "813:21:3"
             },
             "returnParameters": {
-              "id": 622,
+              "id": 630,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "853:0:3"
             },
-            "scope": 625,
+            "scope": 633,
             "src": "781:93:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 626,
+        "scope": 634,
         "src": "60:816:3"
       }
     ],
@@ -2142,7 +2142,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.12",
-  "updatedAt": "2019-12-05T02:07:57.047Z",
+  "updatedAt": "2019-12-07T09:04:17.411Z",
   "devdoc": {
     "methods": {}
   },

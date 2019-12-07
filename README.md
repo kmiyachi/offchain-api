@@ -30,7 +30,7 @@ lt --port 3002
 ### Transfer Eth from one of the Ganache Accounts into the Access Smart Contract 
 ```
 
-web3.eth.sendTransaction({'from': 'ACCOUNT ADDRESS', 'to': 'CONTRACT ADDRESS', 'value': 90000000000000000});
+web3.eth.sendTransaction({'from': '0x2A25D9498eaab3E2B393bF8fB7464F5C5C7d9900', 'to': '0xAe84Ed331221a081213E12e7E490F3589eB3A281', 'value': 90000000000000000});
 ```
 
 ### Read current amount of Eth in Smart Contract
