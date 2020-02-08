@@ -9813,10 +9813,16 @@
       "links": {},
       "address": "0x8779fA90F14C8c7eDC284B3fdFE32acE818aDE63",
       "transactionHash": "0xd023fc3a93639917cd127009ef967a88c5ef7d84ebe1d3212ea0d02a4babd7d2"
+    },
+    "1581122807344": {
+      "events": {},
+      "links": {},
+      "address": "0x2C04E979225BD36D7094DF3E873CD8C541c9B2e6",
+      "transactionHash": "0x3fe252b2a831802be0f168be26a398eec4693046059cbaf0024dcc1f4b86e2d3"
     }
   },
   "schemaVersion": "3.0.12",
-  "updatedAt": "2019-12-07T09:04:17.393Z",
+  "updatedAt": "2020-02-08T01:08:44.826Z",
   "devdoc": {
     "methods": {}
   },

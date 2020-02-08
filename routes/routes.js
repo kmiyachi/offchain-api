@@ -5,20 +5,16 @@ const accessArtifact = require('../build/contracts/Access.json');
 
 
 const request = require('request');
-var contractAddr =  '0x54380b6ea8e841B4933111086934675df03e7d13';
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);
 const contract = require('truffle-contract');
-const accessArtifacts = require('../build/contracts/Access.json');
 const isbn = require('node-isbn');
 
 let catchRevert = require("./exceptions.js").catchRevert;
-
-
-const Access = contract(accessArtifacts)
+const Access = contract(accessArtifact)
 
 var fs = require("fs");
 var Web3 = require('web3');
@@ -28,6 +24,7 @@ if (typeof web3 !== 'undefined') {
 } else {
   var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'))
 }
+
 var access;
 var accountArr = [];
 
@@ -39,10 +36,9 @@ var access = Access.deployed().then((res) => {
     return res;
 });
 
-console.log("access address: ", access.address)
-//console.log("SHIT: ", access.address)
-var access = new web3.eth.Contract(accessArtifact.abi, contractAddr, {from: '0x84Fc70E796E0339001a027202e1dDe7d01BA347b'})
-//console.log(access.address);
+console.log("access address: ", access)
+var access = new web3.eth.Contract(accessArtifact.abi, '0x2C04E979225BD36D7094DF3E873CD8C541c9B2e6', {from: '0x1234567890123456789012345678901234567891'});
+console.log("new access address: ", access.address)
 
 //console.log("Access: ", access);
 //console.log("Access Methods: ", access.methods);
@@ -81,6 +77,9 @@ const router = app => {
     });
 
 
+    app.get('/', async function(request, response) {
+        response.send("Off-Chain Transactions!\n")
+    });
     app.get('/fail', async function(request, response) {
 
         acc = accountArr[1]
@@ -96,6 +95,7 @@ const router = app => {
     });
 
 
+    
     //0x42bb9572ab12e65e117a8a5abf492d48d9e7cf02589dc63cd2feb7477f64c419
     // Display all users
     app.get('/allUsers/:lunaID', async function (request, response) {
@@ -104,7 +104,7 @@ const router = app => {
         try{
             res = await access.methods.researcherAccess(lunaID).send({from: accountArr[0]})
             //response.send({message: res})
-            queryRes = await access.methods.queryDB().send({from: accountArr[0]});
+            //queryRes = await access.methods.queryDB().send({from: accountArr[0]});
           }
         catch(error){
             const revertFound = error.message.search('revert') >= 0;
@@ -165,74 +165,6 @@ const router = app => {
             if (error) throw error;
 
             response.status(201).send(`User added with ID: ${result.insertId}`);
-        });
-    });
-
-
-    app.get('/oracleTest', async function (request, response) {
-
-        //const lunaID = request.params.lunaID;
-        try{
-            res = await access.methods.queryDB().send({from: accountArr[0]})
-            //response.send({message: res})
-          }
-        catch(error){
-            const revertFound = error.message.search('revert') >= 0;
-            response.send({
-                error: revertFound,
-                errMessage: error.message
-            });
-            return;
-        }
-
-        hope = await access.methods.getRes().call({from: accountArr[0]})
-        response.send({message: hope})
-    });
-
-    // Update an existing user
-    app.put('/users/:id/:lunaID', async function (request, response) {
-        const id = request.params.id;
-        const lunaID = request.params.lunaID;
-        try{
-            res = await access.methods.memberAccess(lunaID).send({from: accountArr[0]})
-            //response.send({message: res})
-          }
-        catch(error){
-            const revertFound = error.message.search('revert') >= 0;
-            response.send({
-                error: revertFound,
-                errMessage: error.message
-            });
-            return;
-        }
-
-        pool.query('UPDATE users SET ? WHERE id = ?', [request.body, id], (error, result) => {
-            if (error) throw error;
-
-            response.send('User updated successfully.');
-        });
-    });
-
-    // Delete a user
-    app.delete('/users/:id/lunaID', async function (request, response) {
-        const id = request.params.id;
-        const lunaID = request.params.lunaID;
-        try{
-            res = await access.methods.memberAccess(lunaID).send({from: accountArr[0]})
-            //response.send({message: res})
-          }
-        catch(error){
-            const revertFound = error.message.search('revert') >= 0;
-            response.send({
-                error: revertFound,
-                errMessage: error.message
-            });
-            return;
-        }
-
-        pool.query('DELETE FROM users WHERE id = ?', id, (error, result) => {
-            if (error) throw error;
-            response.send('User deleted.');
         });
     });
 }

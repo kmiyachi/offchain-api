@@ -1433,10 +1433,16 @@
       "links": {},
       "address": "0xb3b8B7b680a6A3b24d7d29e02e28BFD76F199eEC",
       "transactionHash": "0x8c69b94c85f4206e0c9f400de3e6a574cdbe5643503d906a3d6e71d2fd3d0230"
+    },
+    "1581122807344": {
+      "events": {},
+      "links": {},
+      "address": "0x2d77B7Af90E49f94070BFB4E7fD9C7d95E3671B1",
+      "transactionHash": "0x8f2cdf6f944cb343ee3062197789612f7f941ac190cdc112b36326dd5b61ca3c"
     }
   },
   "schemaVersion": "3.0.12",
-  "updatedAt": "2019-12-07T09:04:17.428Z",
+  "updatedAt": "2020-02-08T01:08:44.846Z",
   "devdoc": {
     "methods": {}
   },

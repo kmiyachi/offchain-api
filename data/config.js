@@ -3,9 +3,9 @@ const mysql = require('mysql');
 // Set database connection credentials
 const config = {
     host: 'remotemysql.com',
-    user: 'V3pkwGwMP5',
-    password: 'oBfdOrHYr1',
-    database: 'V3pkwGwMP5',
+    user: 'JK1VZBM0Ws',
+    password: 'ALaqTE26oN',
+    database: 'JK1VZBM0Ws',
 };
 
 // Create a MySQL pool

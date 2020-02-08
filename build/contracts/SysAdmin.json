@@ -6929,10 +6929,16 @@
       "links": {},
       "address": "0x2642285559D07798DB5085662703b1f2ba776a19",
       "transactionHash": "0xcb4e2ce0d0be9f9d61d55a3648ef2e7c3f66428c6f08b6da9fe5478f5fcbb191"
+    },
+    "1581122807344": {
+      "events": {},
+      "links": {},
+      "address": "0x4042295f8f2BDC3F56883CB6dd7a415aeE1cBb04",
+      "transactionHash": "0xf7677563fbfd659ee663ec9d3f37d33af28104f1bc4eecd3830be878f7d04fc1"
     }
   },
   "schemaVersion": "3.0.12",
-  "updatedAt": "2019-12-07T09:04:17.407Z",
+  "updatedAt": "2020-02-08T01:08:44.835Z",
   "devdoc": {
     "methods": {
       "createMember(string,string,bool)": {
