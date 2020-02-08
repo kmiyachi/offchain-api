@@ -122,12 +122,13 @@ const router = app => {
     });
 
     // Display a single user by ID
-    app.get('/users/:id/:lunaID', async function (request, response) {
+    app.get('/user/:id/:lunaID', async function (request, response) {
         const id = request.params.id;
         const lunaID = request.params.lunaID;
         try{
             res = await access.methods.researcherAccess(lunaID).send({from: accountArr[0]})
             //response.send({message: res})
+            // Variable will set the hash from Smart Contract (from Oracle)
           }
         catch(error){
             const revertFound = error.message.search('revert') >= 0;
@@ -138,8 +139,16 @@ const router = app => {
             return;
         }
 
+
+        // pool.query('SELECT hash from users WHERE id = ?' id, (error, result) =>{// CHECK HASH})
         pool.query('SELECT * FROM users WHERE id = ?', id, (error, result) => {
             if (error) throw error;
+            res = result[0]
+            var hash = res['hash'];
+            var name = res['name'];
+            var email = res['email'];
+            var chash = sha256(name+email);
+            // if hash == chash:
             response.send(result[0]);
         });
     });
