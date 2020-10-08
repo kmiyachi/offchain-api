@@ -1,15 +1,15 @@
 {
   "contractName": "SafeMath",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Wrappers over Solidity's arithmetic operations with added overflow checks. * Arithmetic operations in Solidity wrap on overflow. This can easily result in bugs, because programmers usually assume that an overflow raises an error, which is the standard behavior in high level programming languages. `SafeMath` restores this intuition by reverting the transaction when an operation overflows. * Using this library instead of the unchecked operations eliminates an entire class of bugs, so it's recommended to use it always.\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol\":\"SafeMath\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol\":{\"keccak256\":\"0x3c23444c6015a1f61fe0b773a6efbfcabe129ac429a7863fd300c7bc2862d355\",\"urls\":[\"bzzr://eaf420f0cf764b3d295fae2f1408a1df026a58c55efef88d04afd39d5adda4a4\"]}},\"version\":1}",
-  "bytecode": "0x604c6023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a72305820bc66993531bce85062b918c658c0127e213e007b9e82183e0565b942f0e0aeb50029",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea165627a7a72305820bc66993531bce85062b918c658c0127e213e007b9e82183e0565b942f0e0aeb50029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Wrappers over Solidity's arithmetic operations with added overflow checks. * Arithmetic operations in Solidity wrap on overflow. This can easily result in bugs, because programmers usually assume that an overflow raises an error, which is the standard behavior in high level programming languages. `SafeMath` restores this intuition by reverting the transaction when an operation overflows. * Using this library instead of the unchecked operations eliminates an entire class of bugs, so it's recommended to use it always.\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/samsonqian/Documents/GitHub/offchain-api/contracts/SafeMath.sol\":\"SafeMath\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/samsonqian/Documents/GitHub/offchain-api/contracts/SafeMath.sol\":{\"keccak256\":\"0x3c23444c6015a1f61fe0b773a6efbfcabe129ac429a7863fd300c7bc2862d355\",\"urls\":[\"bzz-raw://41737de97a81696ce17415d9cd6d8a380df58224537975fea58cdd2af4ebf591\",\"dweb:/ipfs/QmZUQDgFBatFXLQenQyZ6htEXiX73tvZ8wbgPBy74jHwem\"]}},\"version\":1}",
+  "bytecode": "0x60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820975870ca1e011363d9fc2b354746ebfda1963b6b2e7dc947790905f508ccdab564736f6c634300050c0032",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72315820975870ca1e011363d9fc2b354746ebfda1963b6b2e7dc947790905f508ccdab564736f6c634300050c0032",
   "sourceMap": "633:2937:5:-;;132:2:-1;166:7;155:9;146:7;137:37;255:7;249:14;246:1;241:23;235:4;232:33;222:2;;269:9;222:2;293:9;290:1;283:20;323:4;314:7;306:22;347:7;338;331:24",
   "deployedSourceMap": "633:2937:5:-;;;;;;;;",
   "source": "pragma solidity >= 0.5.0 < 0.6.0; // Incompatible compiler version\n\n\n/**\n * @dev Wrappers over Solidity's arithmetic operations with added overflow\n * checks.\n *\n * Arithmetic operations in Solidity wrap on overflow. This can easily result\n * in bugs, because programmers usually assume that an overflow raises an\n * error, which is the standard behavior in high level programming languages.\n * `SafeMath` restores this intuition by reverting the transaction when an\n * operation overflows.\n *\n * Using this library instead of the unchecked operations eliminates an entire\n * class of bugs, so it's recommended to use it always.\n */\nlibrary SafeMath {\n    /**\n     * @dev Returns the addition of two unsigned integers, reverting on\n     * overflow.\n     *\n     * Counterpart to Solidity's `+` operator.\n     *\n     * Requirements:\n     * - Addition cannot overflow.\n     */\n    function add(uint256 a, uint256 b) internal pure returns (uint256) {\n        uint256 c = a + b;\n        require(c >= a, \"SafeMath: addition overflow\");\n        return c;\n    }\n\n    /**\n     * @dev Returns the subtraction of two unsigned integers, reverting on\n     * overflow (when the result is negative).\n     *\n     * Counterpart to Solidity's `-` operator.\n     *\n     * Requirements:\n     * - Subtraction cannot overflow.\n     */\n    function sub(uint256 a, uint256 b) internal pure returns (uint256) {\n        require(b <= a, \"SafeMath: subtraction overflow\");\n        uint256 c = a - b;\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the multiplication of two unsigned integers, reverting on\n     * overflow.\n     *\n     * Counterpart to Solidity's `*` operator.\n     *\n     * Requirements:\n     * - Multiplication cannot overflow.\n     */\n    function mul(uint256 a, uint256 b) internal pure returns (uint256) {\n        // Gas optimization: this is cheaper than requiring 'a' not being zero, but the\n        // benefit is lost if 'b' is also tested.\n        // See: https://github.com/OpenZeppelin/openzeppelin-solidity/pull/522\n        if (a == 0) {\n            return 0;\n        }\n\n        uint256 c = a * b;\n        require(c / a == b, \"SafeMath: multiplication overflow\");\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the integer division of two unsigned integers. Reverts on\n     * division by zero. The result is rounded towards zero.\n     *\n     * Counterpart to Solidity's `/` operator. Note: this function uses a\n     * `revert` opcode (which leaves remaining gas untouched) while Solidity\n     * uses an invalid opcode to revert (consuming all remaining gas).\n     *\n     * Requirements:\n     * - The divisor cannot be zero.\n     */\n    function div(uint256 a, uint256 b) internal pure returns (uint256) {\n        // Solidity only automatically asserts when dividing by 0\n        require(b > 0, \"SafeMath: division by zero\");\n        uint256 c = a / b;\n        // assert(a == b * c + a % b); // There is no case in which this doesn't hold\n\n        return c;\n    }\n\n    /**\n     * @dev Returns the remainder of dividing two unsigned integers. (unsigned integer modulo),\n     * Reverts when dividing by zero.\n     *\n     * Counterpart to Solidity's `%` operator. This function uses a `revert`\n     * opcode (which leaves remaining gas untouched) while Solidity uses an\n     * invalid opcode to revert (consuming all remaining gas).\n     *\n     * Requirements:\n     * - The divisor cannot be zero.\n     */\n    function mod(uint256 a, uint256 b) internal pure returns (uint256) {\n        require(b != 0, \"SafeMath: modulo by zero\");\n        return a % b;\n    }\n}",
-  "sourcePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol",
+  "sourcePath": "/Users/samsonqian/Documents/GitHub/offchain-api/contracts/SafeMath.sol",
   "ast": {
-    "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol",
+    "absolutePath": "/Users/samsonqian/Documents/GitHub/offchain-api/contracts/SafeMath.sol",
     "exportedSymbols": {
       "SafeMath": [
         865
@@ -1753,7 +1753,7 @@
     "src": "0:3570:5"
   },
   "legacyAST": {
-    "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol",
+    "absolutePath": "/Users/samsonqian/Documents/GitHub/offchain-api/contracts/SafeMath.sol",
     "exportedSymbols": {
       "SafeMath": [
         865
@@ -3498,9 +3498,15 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
   },
   "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xA734F39eC0a542EAd39997859DbCaB6F54E3171c",
+      "transactionHash": "0xa009476638daf1db0423f3ffd11e1813a5215fa9c2d6b514756aac601a6dffd7"
+    },
     "1574729729862": {
       "events": {},
       "links": {},
@@ -3530,10 +3536,29 @@
       "links": {},
       "address": "0xDf822Ad5B85686DFCbe19671C1bdf2Fa6De68b20",
       "transactionHash": "0xcc2354c1417d0faae7c3d1a09ca3bb9999f4ce7b480705e54d20cef923ffc2cf"
+    },
+    "1581127682121": {
+      "events": {},
+      "links": {},
+      "address": "0xd25FF1B9324BEa26E3D6f18C2EfCB7cdc6005bE1",
+      "transactionHash": "0xb963304daad64135457764443391316f0f37aa6bd939543fa9ee1cb5bd1a510e"
+    },
+    "1602122197356": {
+      "events": {},
+      "links": {},
+      "address": "0x72Cf1858ccC4208E9734D0CA8a8cD0a27ad565C4",
+      "transactionHash": "0x1dabe80bccab15b0fb31c33e434d057f5d19962509d1377224a36eb425493f03"
+    },
+    "1602132225914": {
+      "events": {},
+      "links": {},
+      "address": "0xdc494f5d8f6a0BFC970985B4F0539e7dc67cB52B",
+      "transactionHash": "0xb7ba28c4c443649bb557ebd4c6f997296dc436352a5556100ce14de4d681df79"
     }
   },
-  "schemaVersion": "3.0.12",
-  "updatedAt": "2020-02-08T01:08:44.832Z",
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-10-08T05:37:00.315Z",
+  "networkType": "ethereum",
   "devdoc": {
     "details": "Wrappers over Solidity's arithmetic operations with added overflow checks. * Arithmetic operations in Solidity wrap on overflow. This can easily result in bugs, because programmers usually assume that an overflow raises an error, which is the standard behavior in high level programming languages. `SafeMath` restores this intuition by reverting the transaction when an operation overflows. * Using this library instead of the unchecked operations eliminates an entire class of bugs, so it's recommended to use it always.",
     "methods": {}

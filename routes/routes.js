@@ -12,6 +12,7 @@ var bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);
 const contract = require('truffle-contract');
 const isbn = require('node-isbn');
+const contractAddr = '0xd0B05b4495085081C6C3A633d7871AC76fD47918';
 
 let catchRevert = require("./exceptions.js").catchRevert;
 const Access = contract(accessArtifact)
@@ -37,7 +38,10 @@ var access = Access.deployed().then((res) => {
 });
 
 console.log("access address: ", access)
-var access = new web3.eth.Contract(accessArtifact.abi, '0x2C04E979225BD36D7094DF3E873CD8C541c9B2e6', {from: '0x1234567890123456789012345678901234567891'});
+//var access = new web3.eth.Contract(accessArtifact.abi, '0x1E446D3cD84B1C9551FAd4F0394e4735ed264A10', {from: '0x92ee427D2F0bFBe64c84249F787cBb60134fA100'});
+//var access = new web3.eth.Contract(accessArtifact.abi, '0x1E446D3cD84B1C9551FAd4F0394e4735ed264A10', {from: '0xeF910A670C8B3884835CCe7A5f15bCBd7298F4d7'});
+var access = new web3.eth.Contract(accessArtifact.abi, contractAddr, {from: '0xeF910A670C8B3884835CCe7A5f15bCBd7298F4d7'});
+
 console.log("new access address: ", access.address)
 
 //console.log("Access: ", access);

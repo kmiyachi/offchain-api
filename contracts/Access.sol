@@ -121,7 +121,4 @@ contract Access is usingProvable {
     function getRes() public pure returns (string memory res) {
         return res;
     }
-
-    
-
 }

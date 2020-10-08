@@ -4,6 +4,7 @@
     {
       "inputs": [
         {
+          "internalType": "bytes32",
           "name": "_id",
           "type": "bytes32"
         }
@@ -16,6 +17,7 @@
       "constant": false,
       "inputs": [
         {
+          "internalType": "address",
           "name": "_memberAddr",
           "type": "address"
         }
@@ -30,10 +32,12 @@
       "constant": false,
       "inputs": [
         {
+          "internalType": "bytes32",
           "name": "_lunaId",
           "type": "bytes32"
         },
         {
+          "internalType": "bytes32",
           "name": "_orgId",
           "type": "bytes32"
         }
@@ -48,6 +52,7 @@
       "constant": false,
       "inputs": [
         {
+          "internalType": "address",
           "name": "_memberAddr",
           "type": "address"
         }
@@ -62,6 +67,7 @@
       "constant": false,
       "inputs": [
         {
+          "internalType": "address",
           "name": "_memberAddr",
           "type": "address"
         }
@@ -73,15 +79,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"_memberAddr\",\"type\":\"address\"}],\"name\":\"addResearcherToOrg\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_memberAddr\",\"type\":\"address\"}],\"name\":\"addMemberToOrg\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_lunaId\",\"type\":\"bytes32\"},{\"name\":\"_orgId\",\"type\":\"bytes32\"}],\"name\":\"deleteUserFromOrganization\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_memberAddr\",\"type\":\"address\"}],\"name\":\"deleteResearcherFromOrg\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"_id\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/kenmiyachi/BlockLAB/offchain-api/contracts/Organization.sol\":\"Organization\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/kenmiyachi/BlockLAB/offchain-api/contracts/Organization.sol\":{\"keccak256\":\"0x7347cf42055305019f31f5c16c7383dfd6f36009ad9ed66c177ab0836203e5cf\",\"urls\":[\"bzzr://9ba701710d3dfd82f09b32320a44747ac5d0a8950b205da5bb80d3bb26f873fe\"]},\"/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol\":{\"keccak256\":\"0x3c23444c6015a1f61fe0b773a6efbfcabe129ac429a7863fd300c7bc2862d355\",\"urls\":[\"bzzr://eaf420f0cf764b3d295fae2f1408a1df026a58c55efef88d04afd39d5adda4a4\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506040516020806105b78339810180604052602081101561003057600080fd5b81019080805190602001909291905050508060008190555033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505061051e806100996000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063402118c0146100515780636b1c017f146100955780638b60f707146100d9578063ba25b55014610111575b600080fd5b6100936004803603602081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610155565b005b6100d7600480360360208110156100ab57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610264565b005b61010f600480360360408110156100ef57600080fd5b810190808035906020019092919080359060200190929190505050610373565b005b6101536004803603602081101561012757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061041d565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101fb576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b60028190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461030a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b60028190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610419576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b5050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146104c3576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b5056fe53656e646572206973206e6f7420746865204f7267616e697a6174696f6e2041646d696e6973747261746f72a165627a7a72305820660c5faa54ce4f37c575d6de360bd5f957e34e66f566af74a93d8e026e32448c0029",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063402118c0146100515780636b1c017f146100955780638b60f707146100d9578063ba25b55014610111575b600080fd5b6100936004803603602081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610155565b005b6100d7600480360360208110156100ab57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610264565b005b61010f600480360360408110156100ef57600080fd5b810190808035906020019092919080359060200190929190505050610373565b005b6101536004803603602081101561012757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061041d565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101fb576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b60028190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461030a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b60028190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610419576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b5050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146104c3576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b5056fe53656e646572206973206e6f7420746865204f7267616e697a6174696f6e2041646d696e6973747261746f72a165627a7a72305820660c5faa54ce4f37c575d6de360bd5f957e34e66f566af74a93d8e026e32448c0029",
-  "sourceMap": "60:816:3:-;;;187:100;8:9:-1;5:2;;;30:1;27;20:12;5:2;187:100:3;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;187:100:3;;;;;;;;;;;;;;;;237:3;229:5;:11;;;;269:10;250:8;;:30;;;;;;;;;;;;;;;;;;187:100;60:816;;;;;;",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_id\",\"type\":\"bytes32\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_memberAddr\",\"type\":\"address\"}],\"name\":\"addMemberToOrg\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_memberAddr\",\"type\":\"address\"}],\"name\":\"addResearcherToOrg\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_memberAddr\",\"type\":\"address\"}],\"name\":\"deleteResearcherFromOrg\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_lunaId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"_orgId\",\"type\":\"bytes32\"}],\"name\":\"deleteUserFromOrganization\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/samsonqian/Documents/GitHub/offchain-api/contracts/Organization.sol\":\"Organization\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/samsonqian/Documents/GitHub/offchain-api/contracts/Organization.sol\":{\"keccak256\":\"0x7347cf42055305019f31f5c16c7383dfd6f36009ad9ed66c177ab0836203e5cf\",\"urls\":[\"bzz-raw://e42190d9f3f9bd73df267c18973c0b55b6d59e6b8506fa16d5181d07f9343f9e\",\"dweb:/ipfs/QmQaD2CQChCnReRZNrKw1nsqXJrU8J1ax8rcWw9y9PKRU3\"]},\"/Users/samsonqian/Documents/GitHub/offchain-api/contracts/SafeMath.sol\":{\"keccak256\":\"0x3c23444c6015a1f61fe0b773a6efbfcabe129ac429a7863fd300c7bc2862d355\",\"urls\":[\"bzz-raw://41737de97a81696ce17415d9cd6d8a380df58224537975fea58cdd2af4ebf591\",\"dweb:/ipfs/QmZUQDgFBatFXLQenQyZ6htEXiX73tvZ8wbgPBy74jHwem\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516105c33803806105c38339818101604052602081101561003357600080fd5b81019080805190602001909291905050508060008190555033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506105278061009c6000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063402118c0146100515780636b1c017f146100955780638b60f707146100d9578063ba25b55014610111575b600080fd5b6100936004803603602081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610155565b005b6100d7600480360360208110156100ab57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610264565b005b61010f600480360360408110156100ef57600080fd5b810190808035906020019092919080359060200190929190505050610373565b005b6101536004803603602081101561012757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061041d565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101fb576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b60028190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461030a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b60028190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610419576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b5050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146104c3576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b5056fe53656e646572206973206e6f7420746865204f7267616e697a6174696f6e2041646d696e6973747261746f72a265627a7a72315820c2273782adbc51fca55ec07bc320274abdfb7ac4b58e29170b39b3cad9df7d1e64736f6c634300050c0032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063402118c0146100515780636b1c017f146100955780638b60f707146100d9578063ba25b55014610111575b600080fd5b6100936004803603602081101561006757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610155565b005b6100d7600480360360208110156100ab57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610264565b005b61010f600480360360408110156100ef57600080fd5b810190808035906020019092919080359060200190929190505050610373565b005b6101536004803603602081101561012757600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061041d565b005b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146101fb576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b60028190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161461030a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b60028190806001815401808255809150509060018203906000526020600020016000909192909190916101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614610419576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b5050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16146104c3576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252602c8152602001806104c7602c913960400191505060405180910390fd5b5056fe53656e646572206973206e6f7420746865204f7267616e697a6174696f6e2041646d696e6973747261746f72a265627a7a72315820c2273782adbc51fca55ec07bc320274abdfb7ac4b58e29170b39b3cad9df7d1e64736f6c634300050c0032",
+  "sourceMap": "60:816:3:-;;;187:100;8:9:-1;5:2;;;30:1;27;20:12;5:2;187:100:3;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;187:100:3;;;;;;;;;;;;;;;;237:3;229:5;:11;;;;269:10;250:8;;:30;;;;;;;;;;;;;;;;;;187:100;60:816;;;;;;",
   "deployedSourceMap": "60:816:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:816:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;658:112;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;658:112:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;429:108;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;429:108:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;543;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;543:108:3;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;781:93;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;781:93:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;658:112;348:8;;;;;;;;;;;334:22;;:10;:22;;;326:79;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;735:10;751:11;735:28;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;735:28:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;658:112;:::o;429:108::-;348:8;;;;;;;;;;;334:22;;:10;:22;;;326:79;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;502:10;518:11;502:28;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;502:28:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;429:108;:::o;543:::-;348:8;;;;;;;;;;;334:22;;:10;:22;;;326:79;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;543:108;;:::o;781:93::-;348:8;;;;;;;;;;;334:22;;:10;:22;;;326:79;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;781:93;:::o",
   "source": "pragma solidity >=0.4.21 <0.6.0;\n\nimport \"./SafeMath.sol\";\n\ncontract Organization {\n    bytes32 orgID;\n    address orgAdmin;\n    address[] memberList;\n    address[] researcherList;\n\n\n    constructor(bytes32 _id) public {\n        orgID = _id;\n        orgAdmin = address(msg.sender);\n    }\n\n\n    modifier isOrgAdmin() {\n        require(msg.sender == orgAdmin, \"Sender is not the Organization Administrator\");\n        _;\n    }\n\n    function addMemberToOrg(address _memberAddr) public isOrgAdmin {\n        memberList.push(_memberAddr);\n    }\n\n    function deleteUserFromOrganization(bytes32 _lunaId, bytes32 _orgId) public isOrgAdmin {\n        //TBD\n    }\n\n\n    function addResearcherToOrg(address _memberAddr) public isOrgAdmin {\n        memberList.push(_memberAddr);\n    }\n\n\n        function deleteResearcherFromOrg(address _memberAddr) public isOrgAdmin {\n        //TBD\n    }\n}",
-  "sourcePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/Organization.sol",
+  "sourcePath": "/Users/samsonqian/Documents/GitHub/offchain-api/contracts/Organization.sol",
   "ast": {
-    "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/Organization.sol",
+    "absolutePath": "/Users/samsonqian/Documents/GitHub/offchain-api/contracts/Organization.sol",
     "exportedSymbols": {
       "Organization": [
         633
@@ -105,7 +111,7 @@
         "src": "0:32:3"
       },
       {
-        "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol",
+        "absolutePath": "/Users/samsonqian/Documents/GitHub/offchain-api/contracts/SafeMath.sol",
         "file": "./SafeMath.sol",
         "id": 547,
         "nodeType": "ImportDirective",
@@ -1109,7 +1115,7 @@
     "src": "0:876:3"
   },
   "legacyAST": {
-    "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/Organization.sol",
+    "absolutePath": "/Users/samsonqian/Documents/GitHub/offchain-api/contracts/Organization.sol",
     "exportedSymbols": {
       "Organization": [
         633
@@ -1133,7 +1139,7 @@
         "src": "0:32:3"
       },
       {
-        "absolutePath": "/Users/kenmiyachi/BlockLAB/offchain-api/contracts/SafeMath.sol",
+        "absolutePath": "/Users/samsonqian/Documents/GitHub/offchain-api/contracts/SafeMath.sol",
         "file": "./SafeMath.sol",
         "id": 547,
         "nodeType": "ImportDirective",
@@ -2138,11 +2144,12 @@
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.12",
-  "updatedAt": "2020-02-08T01:08:44.840Z",
+  "schemaVersion": "3.0.20",
+  "updatedAt": "2020-10-08T05:37:00.329Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
