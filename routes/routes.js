@@ -12,7 +12,7 @@ var bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);
 const contract = require('truffle-contract');
 const isbn = require('node-isbn');
-const contractAddr = '0xd0B05b4495085081C6C3A633d7871AC76fD47918';
+const contractAddr = '0x2565f6Ad7f2C66F2Caf02aDb57E18b20fc866b6a';
 
 let catchRevert = require("./exceptions.js").catchRevert;
 const Access = contract(accessArtifact)
@@ -86,7 +86,7 @@ const router = app => {
     });
     app.get('/fail', async function(request, response) {
 
-        acc = accountArr[1]
+        acc = accountArr[0]
         try{
             await access.methods.getAccess().send({from: acc, gas: 6700000});
           }
