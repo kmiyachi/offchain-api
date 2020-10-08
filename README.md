@@ -1,6 +1,10 @@
 # Off-Chain API
 ![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)
 
+## Overview
+
+This repository contains an application built to manage a hybrid on-chain and off-chain storage system to manage user data. An on-chain verification system is used to ensure data privacy and integrity, allowing only certain verified users of the blockchain network to access and modify existing data in the off-chain database. An off-chain storage is used to promote scalability and flexibility of managing and storing larger amounts of data. This API provides the framework to set up a verification system on top of a database storage to manage and record interactions with the data *(viewing, adding, modifiying, or deleting user data)*.
+
 ## Setup & Run
 
 ### Start Local Ethereum Chain and Create Ethereum Bridge
