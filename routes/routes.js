@@ -10,9 +10,9 @@ var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);
-const contract = require('truffle-contract');
+const contract = require('@truffle/contract');
 const isbn = require('node-isbn');
-const contractAddr = '0x2565f6Ad7f2C66F2Caf02aDb57E18b20fc866b6a';
+const contractAddr = '0x0145F8a998bE435eA08c71653424E5C60E08a4a7';    // set as Access contract address
 
 let catchRevert = require("./exceptions.js").catchRevert;
 const Access = contract(accessArtifact)
@@ -32,17 +32,14 @@ var accountArr = [];
 Access.setProvider(web3.currentProvider)
 
 //var access = Access.at(contractAddr);
-var access = Access.deployed().then((res) => {
-    console.log("RESULT: ",res.address);
+Access.deployed().then((res) => {
+    console.log("RESULT: ", res.address);
     return res;
 });
 
-console.log("access address: ", access)
-//var access = new web3.eth.Contract(accessArtifact.abi, '0x1E446D3cD84B1C9551FAd4F0394e4735ed264A10', {from: '0x92ee427D2F0bFBe64c84249F787cBb60134fA100'});
-//var access = new web3.eth.Contract(accessArtifact.abi, '0x1E446D3cD84B1C9551FAd4F0394e4735ed264A10', {from: '0xeF910A670C8B3884835CCe7A5f15bCBd7298F4d7'});
 var access = new web3.eth.Contract(accessArtifact.abi, contractAddr, {from: '0xeF910A670C8B3884835CCe7A5f15bCBd7298F4d7'});
 
-console.log("new access address: ", access.address)
+console.log("access address: ", access.options.address)
 
 //console.log("Access: ", access);
 //console.log("Access Methods: ", access.methods);
@@ -57,7 +54,7 @@ function setAccounts(results){
 
 
 // Route the app
-const router = app => {
+const router = async app => {
     // Display welcome message on the root
     app.get('/test/:account', async function(request, response) {
         console.log(request.params.account)
@@ -86,7 +83,7 @@ const router = app => {
     });
     app.get('/fail', async function(request, response) {
 
-        acc = accountArr[0]
+        acc = accountArr[1]
         try{
             await access.methods.getAccess().send({from: acc, gas: 6700000});
           }
@@ -106,7 +103,7 @@ const router = app => {
         const lunaID = request.params.lunaID;
         var queryRes = ""
         try{
-            res = await access.methods.researcherAccess(lunaID).send({from: accountArr[0]})
+            res = await access.methods.researcherAccess(lunaID).call() //send({from: accountArr[0]})
             //response.send({message: res})
             //queryRes = await access.methods.queryDB().send({from: accountArr[0]});
           }
