@@ -9,10 +9,12 @@ This repository contains an application built to manage a hybrid on-chain and of
 
 ### Start Local Ethereum Chain and Create Ethereum Bridge
 **1. Open terminal and start Ganache server:**
-* These accounts will be used to make transactions with the blockchain network and call smart contract functions.
+
 ```sh
 $ ganche-cli 
 ```
+These accounts will be used to make transactions with the blockchain network and call smart contract functions.
+
 **2. Open a new terminal and deploy contracts/setup oracle:**
 
 ```
