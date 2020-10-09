@@ -12,7 +12,7 @@ var bcrypt = require('bcrypt');
 var salt = bcrypt.genSaltSync(10);
 const contract = require('@truffle/contract');
 const isbn = require('node-isbn');
-const contractAddr = '0x0145F8a998bE435eA08c71653424E5C60E08a4a7';    // set as Access contract address
+const contractAddr = '0x2565f6Ad7f2C66F2Caf02aDb57E18b20fc866b6a';    // set as Access contract address
 
 let catchRevert = require("./exceptions.js").catchRevert;
 const Access = contract(accessArtifact)
