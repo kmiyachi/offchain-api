@@ -15,6 +15,8 @@ $ ganche-cli
 ```
 These accounts will be used to make transactions with the blockchain network and call smart contract functions.
 
+![Ganache](images/ganache.png)
+
 **2. Open a new terminal and deploy contracts/setup oracle:**
 
 ```
@@ -23,10 +25,14 @@ $ ethereum-bridge -H localhost:8545 -a 1
 ```
 The oracle will be set up to interact with the on-chain and off-chain system. Save the contract address for *Access* into the application *routes.js* to instantiate the contract.
 
+![access contract](images/access_contract.png)
+![access address](images/access_address.png)
+
 **3. Open a new terminal and start application:**
 ```
 $ node app.js
 ```
+![application](images/app.png)
 
 **4. Open a new terminal and launch Local Tunnel:**
 ```
@@ -46,12 +52,15 @@ Retrieve all users within the off-chain storage system after being granted acces
 ```sh
 $ curl http://localhost:3002/allUsers/{verified_user}
 ```
+![all users](images/all_users.png)
 
 ### Post a New User
 Post a new user to the off-chain storage system after being granted access by on-chain verification. User information should be specified in a command in the following format:
 ```sh
 $ curl -d "id={ID}&name={NAME}&email={EMAIL}&hash={HASH}" http://localhost:3002/users/{verified_user}
 ```
+![add_user](images/add_user.png)
+![all users 2](images/all_users2.png)
 
 ### Modify a User
 Modify an existing user's data on the off-chain storage after being granted access by on-chain verification. New user information should be specified in a command in the following format:
